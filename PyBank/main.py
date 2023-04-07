@@ -23,10 +23,10 @@ dates = []
 PLChange = []
 
 # Path to collect the budget data from the Resources folder
-#csvpath =  os.path.join("..", "Resources", "budget_data.csv")
+
 csvmatch = os.getcwd()
 
-csvpath = os.path.join(csvmatch,'Resources','budget_data.csv')
+csvpath = os.path.join(csvmatch,'PyBank','Resources','budget_data.csv')
 print(csvpath)
 with open(csvpath) as csvfile:
 	csvreader = csv.reader(csvfile)
@@ -69,7 +69,7 @@ print(f"Greatest Increase in Profits:  {greatest_increase_month} (${greatest_inc
 print(f"Greatest Decrease in Losses:  {greatest_decrease_month} (${greatest_decrease})")
 
 # writing the financial analysis report to a text file
-budget_file = os.path.join("analysis", "budget_data.txt")
+budget_file = os.path.join('PyBank',"analysis", "budget_data.txt")
 with open(budget_file, "w") as outfile:
 
     outfile.write("Financial Analysis\n")
